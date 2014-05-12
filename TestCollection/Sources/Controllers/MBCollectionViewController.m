@@ -75,6 +75,11 @@ NSString * const MBCollectionViewControllerCellId = @"MBCollectionViewController
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     MBCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:MBCollectionViewControllerCellId forIndexPath:indexPath];
+    cell.titleLabel.text = [NSString stringWithFormat:@"%d", indexPath.row + 1];
+    [cell.titleLabel sizeToFit];
+
+    [cell setNeedsUpdateConstraints];
+
     return cell;
 }
 

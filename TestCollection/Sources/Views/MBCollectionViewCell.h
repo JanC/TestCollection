@@ -6,4 +6,7 @@
 #import <Foundation/Foundation.h>
 
 @interface MBCollectionViewCell : UICollectionViewCell
+
+@property (nonatomic, strong, readonly) UILabel *titleLabel;
+
 @end
